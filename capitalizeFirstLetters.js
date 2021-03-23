@@ -19,3 +19,21 @@ const assert = require('assert');
 
 // // // Check that it works for an empty string
  assert.strictEqual(capitalizeFirstLetters(''), '');
+
+//*************************Code****************************/
+//*********************************************************/
+function capitalizeFirstLetters(chaine){
+    if (chaine !="" ){
+    return chaine.split(' ')
+                .map(function(mot){
+                    return mot[0].toUpperCase()+mot.substr(1);
+                })
+                .join(' ')
+    }else{
+        
+        return '';
+         
+    }
+}
+
+console.log(capitalizeFirstLetters("i am learning TDD"));
